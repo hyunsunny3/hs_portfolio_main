@@ -1,7 +1,4 @@
-.box {
-    width: 100%;
-    height: 100%;
-}
+/* LAYOUT CSS */
 header {
     z-index: 100;
     position: fixed;
@@ -10,8 +7,10 @@ header {
     right: 0;
     width: 100%;
     height: 100px;
-    padding: 0 300px;
     text-align: center;
+    transition: all 0.3s;
+}
+header.drop {
     box-shadow: 0px 5px 20px rgba(243, 133, 118, 0.08);
     backdrop-filter: blur(5px);
 }
@@ -28,4 +27,8 @@ header {
     width: 100%;
     height: 100vh;
     padding: 100px 200px;
+}
+.box {
+    width: 100%;
+    height: 100%;
 }

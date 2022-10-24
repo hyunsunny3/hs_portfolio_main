@@ -1,23 +1,65 @@
-header .nav {
-    display: inline-block;
+/* INDEX CSS */
+
+header > div {
     position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1300px;
+    height: 100%;
+    transition: all 0.3s;
+}
+header > div.show {
+    top: 0;
+}
+header > div .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+header .nav_home .nav {
+    left: 0;
+    text-align: left;
+}
+header .nav_cont .nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 header .nav li {
-    float: left;
-    margin: 0 50px;
+    /* float: left; */
+    display: inline-block;
+    height: 100%;
+    line-height: 50px;
+}
+header .nav_cont .nav li.pick a {
+    color: #F8B5AC;
+}
+header .nav_cont .nav li.pick a::after {
+    width: 100%;
+    left: 0;
+}
+header .nav_home li {
+    margin-right: 80px;
+}
+header .nav_cont li {
+    margin: 0 65px;
 }
 header .nav li a {
     position: relative;
     font-size: 18px;
     transition: all .3s;
 }
+header .nav_home li a {
+    position: relative;
+    font-size: 20px;
+    transition: all .3s;
+}
 header .nav li a:hover {
     color: #F8B5AC;
 }
-header .nav li a::after {
+header .nav li > a::after {
     content: "";
     position: absolute;
     bottom: -3px;
@@ -27,48 +69,9 @@ header .nav li a::after {
     background: #F38576;
     transition: all .3s;
 }
-header .nav li:hover a::after {
+header .nav li:hover > a::after {
     width: 100%;
     left: 0;
-}
-header .contact {
-    position: absolute;
-    top: 50%;
-    right: 200px;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 218, 200, 0.5);
-    border-radius: 50px;
-    transition: .3s;
-    overflow: hidden;
-}
-header .contact .icon {
-    width: 100%;
-    height: 100%;
-    background: url(../img/contact_icon.png)no-repeat center;
-    transition: all .3s;
-}
-header .contact .txt {
-    width: 0%;
-    height: 100%;
-    line-height: 50px;
-    font-size: 18px;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 1px;
-    display: none;
-    transition: all .3s;
-}
-header .contact:hover {
-    width: 180px;
-}
-header .contact:hover .icon {
-    display: none;
-}
-header .contact:hover .txt {
-    display: block;
-    width: 100%;
 }
 
 
@@ -128,15 +131,21 @@ header .contact:hover .txt {
 }
 
 .main .main_box .resume {
-    margin-top: 60px;
+    margin-top: 50px;
 }
 .main .main_box .resume a {
     position: relative;
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    font-size: 18px;
+    padding-left: 50px;
+    text-align: left;
+    line-height: 50px;
+    margin-right: 20px;
+    letter-spacing: 1px;
     background: #ECC3B2;
     color: #fff;
-    padding: 10px 60px 10px 35px;
-    text-align: left;
-    margin-right: 20px;
 }
 .main .main_box .resume a span {
     display: inline-block;
@@ -164,18 +173,24 @@ header .contact:hover .txt {
 }
 .main .main_box .deco1 {
     position: absolute;
-    right: 40px;
+    right: 8%;
     top: 150px;
     width: 211px;
     height: 374px;
-    transform: scaleX(-1) rotate(-40deg);
+    -webkit-transform: scaleX(-1) rotate(-40deg);
     background: url(../img/deco_leaf1.png)no-repeat;
     background-size: contain;
     animation: leaf1 3s ease-in-out 250ms infinite alternate;
+    -webkit-animation: leaf1 3s ease-in-out 250ms infinite alternate;
 }
 @keyframes leaf1 {
     100% {
         transform: scaleX(-1) rotate(-50deg) skew(0deg, 0deg) translate(-30px,-20px);
+      }
+}
+@-webkit-keyframes leaf1 {
+    100% {
+        -webkit-transform: scaleX(-1) rotate(-50deg) skew(0deg, 0deg) translate(-30px,-20px);
       }
 }
 .main .main_box .deco2 {
@@ -202,7 +217,7 @@ header .contact:hover .txt {
 }
 .main .main_box .img_box .img_me {
     position: absolute;
-    left: -50px;
+    right: 0%;
     bottom: 0;
     width: 100%;
     height: 100%;
@@ -211,22 +226,22 @@ header .contact:hover .txt {
 .main .main_box .img_box .img_me > div {
     position: absolute;
     z-index: 2;
-    left: 0;
-    bottom: -100px;
+    right: 0;
+    bottom: -50px;
     /* top: 100px; */
     width: 100%;
     height: 100%;
     background: url(../img/me11.png)no-repeat;
     background-size: 70% auto;
-    background-position: 10% 50%;
+    background-position: 0% 0%;
     overflow: hidden;
 }
 .main .main_box .img_box .blob_wrap {
     position: absolute;
-    top: 20%;
-    right: 100px;
-    width: 100%;
-    height: 80%;
+    top: 10%;
+    right: -20%;
+    width: 130%;
+    height: 130%;
 }
 .main .main_box .img_box .blob_wrap .blob_bg {
     position: absolute;
@@ -234,13 +249,14 @@ header .contact:hover .txt {
     right: 0;
     min-height: 200px;
     min-width: 200px;
-    width: 110%;
-    height: 130%;   
+    width: 100%;
+    height: 100%;   
     background: rgba(255, 218, 200, 0.5);
     /* transform-style: preserve-3d; */
     perspective: 1000px;
-    border-radius: 80% 52% 68% 32% / 80% 28% 72% 58%;
-    animation: blob 30s 0s linear infinite, blob_bg 20s 0s linear infinite alternate;;
+    border-radius: 100%;
+    /* border-radius: 80% 52% 68% 32% / 80% 28% 72% 58%; */
+    /* animation: blob 30s 0s linear infinite, blob_bg 20s 0s linear infinite alternate;; */
 }
 .main .main_box .img_box .blob_wrap .blob_img {
     position: absolute;
@@ -478,94 +494,94 @@ header .contact:hover .txt {
 }
   
 .slides-nav {
-z-index: 99;
-position: absolute;
-right: 760px;
-bottom: 0;
-/* display: flex;
-align-items: center; */
-height: 220px;
-color: #111;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 50px;
+    color: #111;
 }
 .slides-nav__nav {
-position: relative;
-right: 0;
-display: block;
-font-size: 1em;
-transform: rotate(90deg);
-transform-origin: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    font-size: 1em;
+    /* transform: rotate(90deg); */
+    transform-origin: center;
 }
 .slides-nav button {
-position: relative;
-display: inline-block;
-padding: 0.35em;
-/* margin: 0 0 0 0; */
-margin-right: 10px;
-background: transparent;
-border: 0;
-transition: color 0.5s ease;
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 0.35em;
+    background: transparent;
+    margin: 0;
+    border: 0;
+    transition: color 0.5s ease;
+    cursor: pointer;
 }
-.slides-nav button:after {
-content: "";
-z-index: -1;
-position: absolute;
-top: 50%;
-left: 0;
-height: 8px;
-width: 0;
-background: rgb(236, 195, 178);
-transition: width 0.4s ease;
+.slides-nav .slides-nav__prev {
+    left: -100px;
+    background: url(../img/prev.png)no-repeat;
+    background-size: contain;
 }
-.slides-nav button:hover {
-cursor: pointer;
-transition: color 0.5s ease;
+.slides-nav .slides-nav__next {
+    right: -100px;
+    background: url(../img/next.png)no-repeat;
+    background-size: contain;
 }
 .slides-nav button:hover:after {
-width: 100%;
-transition: width 0.4s ease;
+    width: 100%;
+    transition: width 0.4s ease;
 }
 .slides-nav button:focus {
-outline: 0;
+    outline: 0;
 }
 .is-sliding .slides-nav {
-pointer-events: none;
+    pointer-events: none;
 }
 
 .slides {
-position: relative;
-display: block;
-height: 100%;
-width: 100%;
-transition: background 1s cubic-bezier(0.99, 1, 0.92, 1);
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: background 1s cubic-bezier(0.99, 1, 0.92, 1);
 }
 
 .slide {
-z-index: -1;
-padding: 0;
-position: absolute;
-width: 100%;
-height: 100%;
-transition: z-index 1s ease;
+    z-index: -1;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: z-index 1s ease;
 }
 .slide.is-active {
-z-index: 19;
-transition: z-index 1s ease;
+    z-index: 19;
+    transition: z-index 1s ease;
 }
 .slide__content {
-position: relative;
-margin: 0 auto;
-height: 100%;
-width: 100%;
-top: 0;
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    top: 0;
 }
 .slide__header {
-z-index: 9;
-display: inline-block;
-position: absolute;
-bottom: 150px;
-left: 3%;
-width: auto;
-height: auto;
+    z-index: 9;
+    display: inline-block;
+    position: absolute;
+    bottom: 150px;
+    right: 0;
+    width: 40%;
+    height: auto;
 }
 .slide__title .tag {
     position: relative;
@@ -585,27 +601,27 @@ height: auto;
     background: #ECC3B2;
 }
 .slide__title .tit{
-font-size: 46px;
-font-weight: 700;
+    font-size: 46px;
+    font-weight: 700;
 }
 .slide__title .lang {
-margin-top: 20px;
-font-size: 20px;
+    margin-top: 20px;
+    font-size: 20px;
 }
 .slide__title .project_btn {
 margin-top: 80px;
 }
 .slide__title .project_btn a {
-position: relative;
-background: #ECC3B2;
-color: #fff;
-display: inline-block;
-width: 200px;
-height: 60px;
-text-align: center;
-line-height: 60px;
-letter-spacing: 3px;
-margin-right: 15px;
+    position: relative;
+    background: #ECC3B2;
+    color: #fff;
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    letter-spacing: 3px;
+    margin-right: 15px;
 }
 .slide__title .project_btn a > span {
     display: inline-block;
@@ -657,7 +673,7 @@ transition-delay: 0.2s;
 .slide__figure {
 z-index: 7;
 position: absolute;
-right: 0;
+left: 0;
 bottom: 150px;
 margin: 0 auto;
 height: 600px;
