@@ -361,6 +361,8 @@ header .nav li:hover > a::after {
     padding-top: 20px;
 }
 .contents .about .about_right .info_top {
+    display: flex;
+    align-items: flex-start;
     margin-top: 60px;
 }
 .contents .about .about_right dl {
@@ -372,14 +374,17 @@ header .nav li:hover > a::after {
 }
 .contents .about .about_right dd span {
     display: inline-block;
-    width: 70px;
-    font-size: 14px;
+    min-width: 8rem;
+    margin-right: 1rem;
 }
 .contents .about .about_right  .profile dd span {
     letter-spacing: 3px;
 }
 .contents .about .about_right  dd {
     padding: 5px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .contents .about .about_right .profile dd:nth-of-type(3) span {
     letter-spacing: 1px;
