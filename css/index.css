@@ -1,84 +1,5 @@
 /* INDEX CSS */
 
-header > div {
-    position: absolute;
-    top: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1300px;
-    height: 100%;
-    transition: all 0.3s;
-}
-header > div.show {
-    top: 0;
-}
-header > div .nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-}
-header .nav_home .nav {
-    left: 0;
-    text-align: left;
-}
-header .nav_cont .nav {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-header .nav li {
-    /* float: left; */
-    display: inline-block;
-    height: 100%;
-    line-height: 50px;
-}
-header .nav_cont .nav li.pick a {
-    color: #F8B5AC;
-}
-header .nav_cont .nav li.pick a::after {
-    width: 100%;
-    left: 0;
-}
-header .nav_home li {
-    margin-right: 80px;
-}
-header .nav_cont li {
-    margin: 0 65px;
-}
-header .nav li a {
-    position: relative;
-    font-size: 18px;
-    transition: all .3s;
-}
-header .nav_home li a {
-    position: relative;
-    font-size: 20px;
-    transition: all .3s;
-}
-header .nav li a:hover {
-    color: #F8B5AC;
-}
-header .nav li > a::after {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: #F38576;
-    transition: all .3s;
-}
-header .nav li:hover > a::after {
-    width: 100%;
-    left: 0;
-}
-
-
-.main {
-    /* padding-left: 200px; */
-    overflow: hidden;
-}
 .main .main_box {
     position: relative;
     width: 100%;
@@ -93,20 +14,28 @@ header .nav li:hover > a::after {
 }
 .main .main_box .main_left .slogun_wrap {
     position: absolute;
-    top: 40%;
-    left: 30%;
+    top: 30%;
+    left: 20%;
     width: 100%;
     height: auto;
-}
-.main .main_box .main_left .slogun_wrap .slogun {
-    width: 100%;
-    font-size: 50px;
-    line-height: 80px;
+    z-index: 9999;
 }
 .main .main_box .main_left .slogun_wrap .slogun span {
-    font-weight: 900;
-    color: #F38576;
+    display: block;
+    margin-bottom: 3rem;
+    font-family: 'Inter';
+    font-size: 6rem;
+    color: #cdafaf;
+    font-weight: 800;
 }
+.main .main_box .main_left .slogun_wrap .slogun p{
+    font-size: 20rem;
+    font-weight: 900;
+    font-family: 'Inter';
+    color: #cdafaf;
+    line-height: 1.1;
+}
+
 .typed-cursor {
     opacity: 0;
     display: none;
@@ -217,62 +146,28 @@ header .nav li:hover > a::after {
 }
 .main .main_box .img_box .img_me {
     position: absolute;
-    right: 0%;
-    bottom: 0;
+    right: 10%;
+    bottom: -5%;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background: #f1eaea;
+    border-radius: 100%;
+    animation: blob 32s 0s linear infinite;
 }
 .main .main_box .img_box .img_me > div {
     position: absolute;
     z-index: 2;
     right: 0;
-    bottom: -50px;
-    /* top: 100px; */
+    bottom: -5rem;
     width: 100%;
     height: 100%;
-    background: url(../img/me11.png)no-repeat;
-    background-size: 70% auto;
-    background-position: 0% 0%;
+    background: url(../img/me11.png) no-repeat;
+    background-size: 90% auto;
+    background-position: 50% -10%;
     overflow: hidden;
 }
-.main .main_box .img_box .blob_wrap {
-    position: absolute;
-    top: 10%;
-    right: -20%;
-    width: 130%;
-    height: 130%;
-}
-.main .main_box .img_box .blob_wrap .blob_bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-height: 200px;
-    min-width: 200px;
-    width: 100%;
-    height: 100%;   
-    background: rgba(255, 218, 200, 0.5);
-    /* transform-style: preserve-3d; */
-    perspective: 1000px;
-    border-radius: 100%;
-    /* border-radius: 80% 52% 68% 32% / 80% 28% 72% 58%; */
-    /* animation: blob 30s 0s linear infinite, blob_bg 20s 0s linear infinite alternate;; */
-}
-.main .main_box .img_box .blob_wrap .blob_img {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    min-height: 200px;
-    min-width: 200px;
-    width: 550px;
-    height: 550px;   
-    background: url(../img/me1.jpg)no-repeat;
-    background-position: 0px -50px;
-    background-size: cover;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    animation: blob 32s 0s linear infinite;
-}
+
 @keyframes blob_bg {
     0% {
       transform: rotateZ(8deg);
@@ -305,152 +200,135 @@ header .nav li:hover > a::after {
     100%{ border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%; }
 }
 
-.contents .cont_deco1 {
+.cont_deco1 {
     position: absolute;
-    right: -100px;
-    top: 150px;
+    left: -10rem;
+    top: 15rem;
     z-index: -1;
-    width: 1500px;
-    height: 1500px;
+    width: 180rem;
+    height: 150rem;
     border-radius: 100%;
     background: rgba(246, 234, 228, 0.3);
 }
-.contents .about .box > div {
+.about {
     position: relative;
-    display: inline-block;
-    width: 50%;
-    height: 100%;
+    padding-top: 30rem;
 }
-.contents .about .about_left .deco1 {
-    position: absolute;
-    z-index: 10;
-    top: 20px;
-    right: 50px;
-    width: 458px;
-    height: 509px;
-    stroke: #F8B5AC;
-    fill: #F8B5AC;
-}
-.contents .about .about_left .deco1 svg {
-    stroke: #ffe4e0;
-    fill: #ffe4e0;
-}
-.contents .about .box .about_img {
-    position: absolute;
-    bottom: 20px;
-    left: 18%;
-    z-index: 2;
+.about .box{
     width: 60%;
-    height: 75%;
-    /* border-radius: 180px 0 180px 180px; */
-    background: #f6eae4;
-    box-shadow: 10px 10px 70px 0px rgb(0 0 0 / 10%);
+    margin: auto;
 }
-.contents .about .box .about_img .img {
-    width: 100%;
-    height: 100%;
-    background: url(../img/me3_shadow.png)no-repeat;
-    background-size: contain;
-    background-position: center 100%;
+.about .titWr{
+    text-align: left;
 }
-.contents .about .about_right {
-    padding-top: 200px;
-    padding-left: 20px;
+.about .titWr .tit{
+    margin: 3rem 0 1.5rem 0;
 }
-.contents .about .about_right .info_wrap {
-    padding-top: 20px;
+.about .info_wrap {
+    width: fit-content;
+    margin-top: 10rem;
 }
-.contents .about .about_right .info_top {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 60px;
+.about dl{
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    column-gap: 2rem;
+    margin: 8rem 0;
 }
-.contents .about .about_right dl {
-    float: left;
+.about dl dt {
+    font-size: 2rem;
+    font-weight: 600;
 }
-.contents .about .about_right dl dt {
-    font-weight: 700;
-    margin-bottom: 10px;
+.about dd ul li{
+    display: grid;
+    grid-template-columns: minmax(15rem, auto) 1fr;
+    column-gap: 1rem;
+    margin-bottom: 1.5rem;
 }
-.contents .about .about_right dd span {
+.about dd ul li *{
+    font-size: 1.8rem;
+}
+.about dd ul li strong{
+    font-weight: 500;
+}
+.about dd span {
     display: inline-block;
     min-width: 8rem;
     margin-right: 1rem;
 }
-.contents .about .about_right  .profile dd span {
+.about .about_right  .profile dd span {
     letter-spacing: 3px;
 }
-.contents .about .about_right  dd {
+.about .about_right  dd {
     padding: 5px 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.contents .about .about_right .profile dd:nth-of-type(3) span {
+.about .about_right .profile dd:nth-of-type(3) span {
     letter-spacing: 1px;
 }
-.contents .about .about_right .experience {
+.about .about_right .experience {
     padding-left: 100px;
 }
 
-.contents .about .about_right .info_bot {
+.about .about_right .info_bot {
     margin-top: 20px;
 }
 
-.contents .skills > .box {
+.skills > .box {
     background: #F6EAE4;
     padding: 60px;
     border-radius: 30px;
 }
-.contents .skills .skills_tit {
+.skills .skills_tit {
     text-align: center;
 }
-.contents .skills .graph {
+.skills .graph {
     width: 100%;
     height: auto;
     margin-top: 30px;
 }
-.contents .skills .animation{
+.skills .animation{
     width: 100%; 
     margin: 0 auto; 
     text-align: center;
 }
-.contents .skills .animation .chart{
+.skills .animation .chart{
     display: inline-block;
     margin: 30px 70px; 
     position: relative;
 }
 @media screen and (min-width: 1400px) and (max-width: 1475px) {
-    .contents .skills .animation .chart{
+    .skills .animation .chart{
         margin: 20px 50px; 
     }
 }
 @media screen and (min-width: 1160px) and (max-width: 1365px) {
-    .contents .skills .animation .chart{
+    .skills .animation .chart{
         margin: 20px 30px; 
     }
 }
 @media screen and (min-width: 1075px) and (max-width: 1159px) {
-    .contents .skills .animation .chart{
+    .skills .animation .chart{
         margin: 10px 20px; 
     }
 }
 @media screen and (min-width: 1024px) and (max-width: 1074px) {
-    .contents .skills .animation .chart{
+    .skills .animation .chart{
         margin: 10px 10px; 
     }
 }
-.contents .skills .animation .chart .chart_svg {
+.skills .animation .chart .chart_svg {
     position: relative;
 }
-.contents .skills .animation .chart .chart_svg h3{
+.skills .animation .chart .chart_svg h3{
     z-index: 10; 
     position: absolute; 
     left: 50%; 
     top: 50%; 
     transform: translate(-50%,-50%);
 }
-.contents .skills .animation .chart .chart_svg svg{
+.skills .animation .chart .chart_svg svg{
     width: 150px; 
     height: 150px; 
     fill: rgba(255, 255, 255, .5); 
@@ -461,7 +339,7 @@ header .nav li:hover > a::after {
     transform: rotate(-90deg);
     stroke-linecap: round;
 }
-.contents .skills .animation .chart p {
+.skills .animation .chart p {
     width: 100%;
     text-align: center;
     font-size: 18px;
@@ -469,18 +347,18 @@ header .nav li:hover > a::after {
     padding-top: 15px;
 }
 
-.contents .project {
+.project {
     height: auto;
     padding-left: 0;
     padding-right: 0;
 }
-.contents .project .project_tit {
+.project .project_tit {
     padding-top: 100px;
     text-align: center;
     /* background: url(../img/quotes.png)no-repeat center;
     background-size: 40px; */
 }
-.contents .project .project_cont {
+.project .project_cont {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -489,7 +367,7 @@ header .nav li:hover > a::after {
 
 /* 프로젝트 슬라이드 */
 
-.contents .project .project_cont .project_web_bg {
+.project .project_cont .project_web_bg {
     position: absolute;
     left: 0;
     bottom: 100px;
@@ -732,7 +610,7 @@ filter: grayscale(100%);
 
 
 /* 앱 프로젝트 */
-.contents .project .project_app {
+.project .project_app {
     background: #eee;
 }
 

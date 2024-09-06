@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Roboto:wght@300&display=swap');
 
 html,
@@ -13,7 +16,7 @@ body {
     height: auto;
 	margin: 0 auto;
     -webkit-overflow-scrolling: touch;
-	font-family: 'Gowun Dodum',"맑은 고딕", '돋움', 'Noto Sans KR', sans-serif;
+	font-family: 'Inter', 'Gowun Dodum', "맑은 고딕", '돋움', 'Noto Sans KR', sans-serif;
 	line-height: 1;
 	box-sizing: border-box;
 	font-size: 1.6rem;
@@ -27,7 +30,7 @@ body {
 }
 
 * {
-	font-family: 'Gowun Dodum',"맑은 고딕", '돋움', 'Noto Sans KR', sans-serif;
+	font-family: 'Inter', 'Gowun Dodum', "맑은 고딕", '돋움', 'Noto Sans KR', sans-serif;
 	line-height: 1;
 	box-sizing: border-box;
 	font-size: 1.6rem;
