@@ -44,32 +44,6 @@ Object.keys(sections).forEach(key => {
 });
 
 
-// const homebtn = document.querySelector('.home_btn');
-// const aboutbtn = document.querySelector('.about_btn');
-// const skillsbtn = document.querySelector('.skills_btn');
-// const projectbtn = document.querySelector('.project_btn');
-// const contactbtn = document.querySelector('.contact_btn');
-// let scrollAmount;
-// homebtn.addEventListener('click',function(e){
-//   e.preventDefault();
-//   document.querySelector('.main').scrollIntoView({behavior:'smooth'})
-// });
-// aboutbtn.addEventListener('click',function(e){
-//   e.preventDefault();
-//   document.querySelector('.about').scrollIntoView({behavior:'smooth'})
-// });
-// skillsbtn.addEventListener('click',function(e){
-//   e.preventDefault();
-//   document.querySelector('.skills').scrollIntoView({behavior:'smooth'})
-// });
-// projectbtn.addEventListener('click',function(e){
-//   e.preventDefault();
-//   document.querySelector('.project').scrollIntoView({behavior:'smooth'})
-// });
-// contactbtn.addEventListener('click',function(e){
-//   e.preventDefault();
-//   document.querySelector('footer').scrollIntoView({behavior:'smooth'})
-// });
 
 
 

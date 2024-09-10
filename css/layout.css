@@ -145,3 +145,7 @@ section .box{
     height: 100%;
     padding: 10rem 20rem;
 }
+section .box.full{
+    padding-left: 0;
+    padding-right: 0;
+}

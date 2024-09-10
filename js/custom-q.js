@@ -1,41 +1,6 @@
 // JQUERY
 
 $(function () {
-
-  //Wheel scroll event
-  // $(".scroll").each(function () {
-  //   $(this).on("mousewheel DOMMouseScroll", function (e) {
-  //       e.preventDefault();
-  //       var delta = 0;
-        
-  //       if (e.originalEvent.wheelDelta) {
-  //           delta = e.originalEvent.wheelDelta / 50;
-  //       } else if (e.originalEvent.detail) {
-  //           delta = -e.originalEvent.detail / 3;
-  //       }
-
-  //       var moveTop = null;
-  //       if (delta < 0) {
-  //           // 다음 요소 체크
-  //           if ($(this).next().length) {
-  //               moveTop = $(this).next().offset().top;
-  //           }
-  //       } else {
-  //           // 이전 요소 체크
-  //           if ($(this).prev().length) {
-  //               moveTop = $(this).prev().offset().top;
-  //           }
-  //       }
-
-  //       if (moveTop !== null) { // moveTop이 null이 아닐 때만 애니메이션
-  //           $("html, body").stop().animate({
-  //               scrollTop: moveTop + 'px'
-  //           }, 300);
-  //       }
-  //   });
-  // });
-
-
   $(window).scroll(function () {
     let navshow = $(window).scrollTop();
     let mainnav = $(".nav_home");
