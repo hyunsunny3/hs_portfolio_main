@@ -170,5 +170,8 @@ iframe {
 @media (max-width: 1150px)  {
     html, body {font-size: 42%;}
 }
+@media (max-width: 1024px)  {
+	html, body {font-size: 38%;}
+}
 
 

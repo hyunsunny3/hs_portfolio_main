@@ -11,8 +11,8 @@
 
 h1 {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
     background: url(../img/logo.png)no-repeat;
     background-size: cover;
 }
@@ -53,7 +53,7 @@ header {
     transition: all 0.3s;
 }
 header.drop {
-    box-shadow: 0px 5px 20px rgba(243, 133, 118, 0.08);
+    box-shadow: 0px 2px 10px rgb(205 176 172 / 10%);
     backdrop-filter: blur(5px);
 }
 
@@ -88,7 +88,7 @@ header .nav_cont .nav {
 header .nav li {
     display: inline-block;
     height: 100%;
-    line-height: 50px;
+    line-height: 5rem;
 }
 header .nav_cont .nav li.pick a {
     color: #F8B5AC;
@@ -98,19 +98,19 @@ header .nav_cont .nav li.pick a::after {
     left: 0;
 }
 header .nav_home li {
-    margin-right: 80px;
+    margin-right: 8rem;
 }
 header .nav_cont li {
-    margin: 0 65px;
+    margin: 0 6.5rem;
 }
 header .nav li a {
     position: relative;
-    font-size: 18px;
+    font-size: 1.8rem;
     transition: all .3s;
 }
 header .nav_home li a {
     position: relative;
-    font-size: 20px;
+    font-size: 2rem;
     transition: all .3s;
 }
 header .nav li a:hover {
@@ -122,7 +122,7 @@ header .nav li > a::after {
     bottom: -3px;
     left: 50%;
     width: 0;
-    height: 2px;
+    height: 0.2rem;
     background: #F38576;
     transition: all .3s;
 }
