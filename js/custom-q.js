@@ -48,7 +48,6 @@ $(function () {
     
   }); 
 
-
   /** ----- Section03- Project Slide ----- **/
   let SliceSlider = {
     // Settings Object

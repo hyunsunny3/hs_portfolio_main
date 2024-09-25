@@ -55,6 +55,9 @@
     .main .main_box .main_left .slogun_wrap .slogun p{
         font-size: 16rem;
     }
+    .project .swiper-nav{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 500px){
