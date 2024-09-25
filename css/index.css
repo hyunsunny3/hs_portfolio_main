@@ -18,7 +18,7 @@
     left: 20%;
     width: 100%;
     height: auto;
-    z-index: 9999;
+    z-index: 999;
 }
 .main .main_box .main_left .slogun_wrap .slogun span {
     display: block;
@@ -396,7 +396,8 @@
     position: absolute;
     right: 5rem;
     left: auto;
-    bottom: 15rem;
+    bottom: auto;
+    top: 85rem;
 }
 
 .slides-nav {

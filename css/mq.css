@@ -45,6 +45,22 @@
     .main .main_box .main_left .slogun_wrap .slogun p{
         font-size: 20rem;
     }
+    .project .project_cont{
+        max-width: none;
+        padding: 10rem 2rem;
+    }
+    .project .swiper-nav{
+        top: 20rem;
+    }
+    .project .swiper-nav .swiper-button{
+        width: 6rem;
+        height: 6rem;
+    }
+    .project .swiper-pagination{
+        right: 10rem;
+        top: 110rem;
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -57,6 +73,26 @@
     }
     .project .swiper-nav{
         display: none;
+    }
+    .slide_cont{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .slide_cont .slide_img{
+        width: auto;
+        min-height: auto;
+        padding-right: 0;
+    }
+    .slide_cont .slide_img a{
+        max-height: 40vh;
+    }
+    .slide_info{
+        width: auto;
+        margin: 2rem 0 0 0;
+    }
+    .project .swiper-pagination{
+        top: auto;
+        bottom: 18rem;
     }
 }
 
